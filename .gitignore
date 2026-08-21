@@ -1,0 +1,25 @@
+# Build and Python outputs
+target/
+**/target/
+__pycache__/
+**/__pycache__/
+.pytest_cache/
+**/.pytest_cache/
+*.class
+*.jar
+*.pyc
+
+# Local evidence and challenge artifacts
+*.jsonl
+*.tar
+*.tar.gz
+*.tar.xz
+*.zip
+*.xz
+*.gz
+
+# Local configuration and secrets
+.env
+.env.*
+*.pem
+*.key

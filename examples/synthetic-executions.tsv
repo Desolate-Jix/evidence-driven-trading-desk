@@ -1,0 +1,7 @@
+# role	feed	owner	incoming_order	resting_order	volume	price	match_id	owner_side
+TAKER	ALPHA	TAKER_A	IN000001	REST0001	1	600	1	BUY
+MAKER	ALPHA	QUOTER_A	IN000001	REST0001	1	600	1	SELL
+TAKER	ALPHA	TAKER_A	IN000002	REST0002	2	605	2	SELL
+MAKER	ALPHA	QUOTER_A	IN000002	REST0002	2	605	2	BUY
+# Exact redelivery of the preceding notification; the Hedger deduplicator removes it.
+MAKER	ALPHA	QUOTER_A	IN000002	REST0002	2	605	2	BUY

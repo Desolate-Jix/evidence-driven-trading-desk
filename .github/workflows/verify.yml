@@ -1,0 +1,25 @@
+name: verify
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: maven
+      - name: Test publication boundary
+        run: python -B tools/test_audit_publication.py
+      - name: Audit public data boundary
+        run: python -B tools/audit_publication.py .
+      - name: Test Java domain modules
+        run: mvn -B test

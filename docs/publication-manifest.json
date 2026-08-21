@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "repository": "Desolate-Jix/evidence-driven-trading-desk",
+  "publication_model": "sanitized-authored-source-and-clean-room-examples",
+  "included_classes": [
+    "bilingual engineering retrospective",
+    "transport-neutral Java domain models",
+    "synthetic tests and examples",
+    "publication boundary audit"
+  ],
+  "excluded_classes": [
+    "supplied challenge files",
+    "exchange and simulator binaries/source",
+    "raw evidence and protected datasets",
+    "submission transcript and personal identifiers"
+  ]
+}
