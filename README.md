@@ -40,6 +40,18 @@ These are **correctness and bounded-risk results in a controlled environment**. 
 
 The economic investigation is a negative and inconclusive result, preserved because it changed the production decision:
 
+### Best observed economic results
+
+“Best” here means **least loss in a particular controlled comparison**, not a profitable or deployable strategy. The rows cover different experiment lengths and should not be compared directly with one another.
+
+| Experiment | Comparator desk MTM | Candidate desk MTM | Observed change | Decision |
+|---|---:|---:|---:|---|
+| SELL-only finalist, three 60-second screens | -7,862.0 | **-2,193.5** | +5,668.5; loss reduced 72.1% | Research-only: nine fills total, rapid `-3` saturation, and all three eligible 500 ms markouts adverse |
+| Stage 8 A-only ablation, three development seeds | -84,890.5 | **-73,691.0** | +11,199.5; 13.19% improvement | Rejected: only one of three seeds improved and zero-fill hedge orders rose to 504 |
+| Retained A+B safety configuration, three development seeds | -84,890.5 | **-83,791.0** | +1,099.5; 1.30% improvement | Retained for stronger risk/reliability behaviour, but the profitability gate still failed |
+
+All reported desk MTM totals remained negative. The SELL-only result mainly reflected reduced participation after the position limit stopped further trading; it did not demonstrate repeatable positive alpha.
+
 - A frozen offline evaluation of 1,200 candidates found **zero** candidates passing every hard gate.
 - A later SELL-only research finalist executed exactly three sells in each of three 60-second screens and then saturated its own `-3` position limit.
 - Across those screens, participation fell from 163 comparator fills to 9 finalist fills. The apparent mark-to-market improvement is therefore descriptive, not evidence of repeatable entry quality.
